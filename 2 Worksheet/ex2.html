@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><body>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 a_Position;
+attribute vec4 a_Color;
+varying vec4 v_Color;
+void main() {
+gl_Position = a_Position;
+gl_PointSize = 10.0;
+v_Color= a_Color;
+}
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 v_Color;
+void main() {
+gl_FragColor = v_Color;
+}
+</script>
+<span class="text">Choose drawing color:</span>
+<select id="colorMenu" size=”8”>
+  <option value="0" selected>Black</option>
+  <option value="1">Red</option>
+  <option value="2">Green</option>
+  <option value="3">Blue</option>
+  <option value="4">Yellow</option>
+  <option value="6">Purple</option>
+  <option value="7">Light blue</option>
+  <option value="8">White</option>
+</select>
+<span class="text">Choose canvas color:</span>
+<select id="clearMenu" size=”8”>
+<option value="0" selected>Black</option>
+<option value="1">Red</option>
+<option value="2">Green</option>
+<option value="3">Blue</option>
+<option value="4">Yellow</option>
+<option value="6">Purple</option>
+<option value="7">Light blue</option>
+<option value="8">White</option>
+</select><br/>
+<button id="clearButton">Clear canvas</button>
+<button id="pointButton">Draw points</button>
+<button id="triangleButton">Draw triangles</button>
+<button id="circleButton">Draw circles</button>
+<canvas id="canvas" width="512" height="512" />
+<script type="text/javascript" src="script2.js"></script>
+<script type="text/javascript" src="initShaders.js"></script>
+<script type="text/javascript" src="webgl-utils.js"></script>
+<script type="text/javascript" src="MV.js"></script>
+</body>
+</html>
