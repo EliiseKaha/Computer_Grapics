@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><body>
+<script type="text/javascript" src="initShaders.js"></script>
+<script type="text/javascript" src="webgl-utils.js"></script>
+<script type="text/javascript" src="MV.js"></script>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+	attribute vec4 a_Position;
+	attribute vec2 vTexCoord;
+	uniform mat4 u_ProjectionMatrix;
+	varying vec2 fTexCoord;
+  void main() {
+		gl_Position = u_ProjectionMatrix * a_Position;
+		fTexCoord = vTexCoord;
+	}
+	</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	varying vec2 fTexCoord;
+	uniform sampler2D texMap;
+  void main() {
+		gl_FragColor =texture2D(texMap, fTexCoord);
+	}
+	</script>
+<script type="text/javascript" src="scriptPT1.js"></script>
+<canvas id="c" width="512" height="512" />
+</body>
+</html>
