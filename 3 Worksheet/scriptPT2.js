@@ -97,7 +97,7 @@ function render(){
   gl.uniformMatrix4fv(VLoc, false, flatten(V));
   gl.uniformMatrix4fv(PLoc, false, flatten(P));
 
-  gl.drawElements(gl.LINES, indices.length, gl.UNSIGNED_SHORT, 0);
+  gl.drawElements(gl.LINES, indices.length, gl.UNSIGNED_SHORT, 0);}
 
 
 
