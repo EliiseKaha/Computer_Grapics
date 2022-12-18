@@ -4,6 +4,8 @@ Student name: Eliise Kaha
 
 Student number: s221889
 
+Work is done in collaboration with Peter Russel s221550.
+
 ### Exercises
 
 **Worksheet 1** - [Source code](https://github.com/EliiseKaha/Computer_Grapics/tree/main/1%20Worksheet)
@@ -69,7 +71,8 @@ Student number: s221889
 
 * [Part 2](https://www.student.dtu.dk/~s221889/7%20Worksheet/ex7PT2)
 
-**Project** - [Source code](https://github.com/EliiseKaha/Computer_Grapics/tree/main/6%20Worksheet)
+**Project** - [Source code]()
+
 
 
 
