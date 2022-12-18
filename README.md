@@ -63,5 +63,13 @@ Student number: s221889
 
 * [Part 3](https://www.student.dtu.dk/~s221889/6%20Worksheet/ex6PT3)
 
+**Worksheet 7** - [Source code](https://github.com/EliiseKaha/Computer_Grapics/tree/main/6%20Worksheet)
+
+* [Part 1](https://www.student.dtu.dk/~s221889/6%20Worksheet/ex6PT1)
+
+* [Part 2](https://www.student.dtu.dk/~s221889/6%20Worksheet/ex6PT2)
+
+**Project** - [Source code](https://github.com/EliiseKaha/Computer_Grapics/tree/main/6%20Worksheet)
+
 
 
