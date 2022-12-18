@@ -71,7 +71,7 @@ Work is done in collaboration with Peter Russel s221550.
 
 * [Part 2](https://www.student.dtu.dk/~s221889/7%20Worksheet/ex7PT2)
 
-**[Project]()** - [Source code](https://github.com/EliiseKaha/Computer_Grapics/tree/main/CGproject)
+**[Project](https://www.student.dtu.dk/~s221889/CPProject/project)** - [Source code](https://github.com/EliiseKaha/Computer_Grapics/tree/main/CGproject)
 
 
 
