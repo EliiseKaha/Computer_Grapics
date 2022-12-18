@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><body>
+<script type="text/javascript" src="initShaders.js"></script>
+<script type="text/javascript" src="webgl-utils.js"></script>
+<script type="text/javascript" src="MV.js"></script>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 a_Position;
+uniform mat4 u_ModelMatrix;
+uniform mat4 u_ProjectionMatrix;
+attribute vec4 a_Normal;
+varying vec4 v_Normal;
+void main() {
+gl_Position = u_ProjectionMatrix * u_ModelMatrix* a_Position;
+v_Normal = a_Normal;
+}
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 v_Normal;
+uniform samplerCube texMap;
+void main() {
+gl_FragColor = textureCube(texMap, v_Normal.xyz);
+}
+</script>
+<button id="camera">Rotatsion on/off</button>
+<element onload="script">
+<script type="text/javascript" src="scriptPT1.js"></script>
+<canvas id="c" width="512" height="512" />
+</body>
+</html>

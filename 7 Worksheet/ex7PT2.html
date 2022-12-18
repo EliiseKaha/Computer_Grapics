@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><body>
+<script type="text/javascript" src="initShaders.js"></script>
+<script type="text/javascript" src="webgl-utils.js"></script>
+<script type="text/javascript" src="MV.js"></script>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 a_Position;
+uniform mat4 u_ModelMatrix;
+uniform mat4 u_ProjectionMatrix;
+uniform mat4 u_TexMatrix;
+attribute vec4 a_Normal;
+varying vec4 v_Normal;
+varying vec3 fTexCord;
+void main() {
+gl_Position = u_ModelMatrix* a_Position;
+fTexCord = (u_TexMatrix* a_Position).xyz;
+v_Normal = a_Normal;
+}
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 v_Normal;
+varying vec3 fTexCord;
+uniform samplerCube texMap;
+void main() {
+gl_FragColor = textureCube(texMap, fTexCord);
+}
+</script>
+<element onload="script">
+<script type="text/javascript" src="script.js"></script>
+<canvas id="c" width="512" height="512" />
+</body>
+</html>
